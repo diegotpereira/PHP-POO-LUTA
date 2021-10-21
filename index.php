@@ -25,11 +25,14 @@
         $lutador[4] = new Lutador("UFOCobol", "Brasil", 37, 1.70, 119.3, 5, 4, 3);
         $lutador[5] = new Lutador("Nerdaart", "EUA", 30, 1.81, 105.7, 12, 2, 4);
 
-        print_r($lutador[0]);
+        // $lutador[3]->status();
+        // $lutador[3]->apresentar();
 
-        //$lutador[1]->apresentar();
-        //$UEC01 = new Luta();
-        //$UEC01->marcarLuta($lutador[0], $lutador[0]);
+        // print_r($lutador[0]);
+
+        $UEC01 = new Luta();
+        $UEC01->marcarLuta($lutador[0], $lutador[1]);
+        $UEC01->lutar();
         ?>
     </pre>
 </body>

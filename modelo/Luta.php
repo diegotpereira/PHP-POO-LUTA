@@ -105,17 +105,18 @@ return $this;
 }
 
 public function marcarLuta($desafiante , $desafiado) {
-    if ($desafiante ->getCategoria() === $desafiado->getCategoria() && $desafiante  != $desafiado) {
+    if ($desafiante->getCategoria() === $desafiado->getCategoria() && $desafiante  != $desafiado) {
         # code...
         $this->aprovado = true;
         $this->desafiado = $desafiado;
-        $this->desafiante = $desafiante;    
+        $this->desafiante = $desafiante;
 
     } else {
         # code...
         $this->aprovado = false;
         $this->desafiado = null;
         $this->desafiante = null;
+        // echo "A luta não pode acontecer";   
     }
     
 }
@@ -137,13 +138,15 @@ public function lutar() {
                 break;
 
             case '1': // Desafiado Vence
+                echo '<p>-------------RESULTADO----------------</p>';
                 echo "<p>Vitória do </p>" . $this->desafiado->getNome();
                 $this->desafiado->ganharLuta();
                 $this->desafiante->perderLuta();
                 break;
 
             case '2': // Desafiante Vence
-                echo "<p>Vitória do </p>" . $this->desafiante->getNome();
+                echo '<p>-------------RESULTADO----------------</p>';
+                echo "<p>Vitória do " . $this->desafiante->getNome() . "</p>";
                 $this->desafiante->ganharLuta();
                 $this->desafiado->perderLuta();
                 break;

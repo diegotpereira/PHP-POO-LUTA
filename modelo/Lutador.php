@@ -247,18 +247,26 @@
         }
 
         function apresentar() {
-            echo "<p>----------------------------------</p>";
-            echo "   CHEGOU A HORA!!!<br> O Lutador " . $this->getNome();
-            echo " veio direto de " . $this->getNacionalidade();
+            echo '<p>-------------APRESENTAÇÃO----------------</p>';
+            echo '#----------CHEGOU A HORA!!!----------------#';
+            echo '<p> O Lutador: ' . $this->getNome() . '.</p>';
+            echo '<p> Origem: ' . $this->getNacionalidade() . '.</p>';
+            echo '<p> Idade: ' . $this->getIdade() . ' anos.</p>';
+            echo '<p> Altura: ' . $this->getAltura() . ' m de altura.</p>';
+            echo '<p> Pesando: ' . $this->getPeso() . ' kg.</p>';
+            echo '<p> Ganhou: ' . $this->getVitorias() . ' lutas.</p>';
+            echo '<p> Perdeu: ' . $this->getDerrotas() . ' lutas.</p>';
+            echo '<p> Empatou: ' . $this->getEmpates() . ' lutas.</p>';
             
         }
 
         function status() {
-            echo "<p>" . $this->getNome() ."</p>";
-            echo '<p>   É um peso ' . $this->getCategoria() . '</p>';
-            echo '<p>' . $this->getVitorias() . ' vitórias.</p>';
-            echo '<p>' . $this->getDerrotas() . ' derrotas.</p>';
-            echo '<p>' . $this->getEmpates() . ' empates.</p>';
+            echo '<p>-------------CLASSE----------------</p>';
+            echo '<p> O Lutador: ' . $this->getNome() .'</p>';
+            echo '<p> É um peso: ' . $this->getCategoria() . '</p>';
+            echo '<p> Com ' . $this->getVitorias() . ' Vitórias.</p>';
+            echo '<p> Com ' . $this->getDerrotas() . ' Derrotas.</p>';
+            echo '<p> Com ' . $this->getEmpates()  . ' Empates.</p>';
         }
 
         function ganharLuta() {
